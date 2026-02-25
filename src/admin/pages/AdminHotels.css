@@ -1,0 +1,205 @@
+.adminHotels {
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Header */
+.adminHotelsHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.adminHotelsHeader h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.adminHotelsHeader p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Add button */
+.addBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: #0b63f6;
+  color: white;
+  font-weight: 800;
+  transition: 0.25s;
+}
+
+.addBtn:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+/* Filters */
+.filterRow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.searchBox {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 12px 14px;
+  border-radius: 14px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+.searchBox svg {
+  color: #0b63f6;
+}
+
+.searchBox input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.statusSelect {
+  width: 170px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Table */
+.hotelsTableCard {
+  background: white;
+  border-radius: 18px;
+  padding: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.tableWrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.hotelsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hotelsTable th {
+  text-align: left;
+  padding: 12px;
+  font-size: 13px;
+  font-weight: 900;
+  color: #6b7280;
+  border-bottom: 1px solid #eee;
+}
+
+.hotelsTable td {
+  padding: 14px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.hotelName {
+  font-weight: 900;
+  color: #111827;
+}
+
+.priceCell {
+  color: #0b63f6;
+  font-weight: 900;
+}
+
+.emptyRow {
+  text-align: center;
+  padding: 30px !important;
+  color: #6b7280;
+  font-weight: 800;
+}
+
+/* Status pill */
+.pill {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
+.pill.active {
+  background: rgba(34, 197, 94, 0.15);
+  color: #16a34a;
+}
+
+.pill.inactive {
+  background: rgba(239, 68, 68, 0.15);
+  color: #dc2626;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.iconBtn {
+  border: none;
+  cursor: pointer;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s;
+}
+
+.iconBtn.edit {
+  background: rgba(11, 99, 246, 0.12);
+  color: #0b63f6;
+}
+
+.iconBtn.delete {
+  background: rgba(239, 68, 68, 0.12);
+  color: #ef4444;
+}
+
+.iconBtn:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .filterRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .statusSelect {
+    width: 100%;
+  }
+}

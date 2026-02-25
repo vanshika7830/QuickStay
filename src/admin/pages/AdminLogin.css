@@ -1,0 +1,144 @@
+.adminLoginPage {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3f4f6; /* Light gray background */
+  padding: 20px; /* small padding for very small screens */
+}
+
+.adminLoginCard {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  color: #111827;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #0b63f6;
+}
+
+.subtitle {
+  font-size: 14px;
+  margin-bottom: 25px;
+  color: #374151;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.inputBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f1f5f9;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+}
+
+.inputBox input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #111827;
+  width: 100%;
+  font-size: 14px;
+}
+
+.loginBtn {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #0b63f6;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.loginBtn:hover {
+  background: #0953c6;
+  transform: translateY(-2px);
+}
+
+.error {
+  color: #dc2626;
+  font-size: 14px;
+  margin-top: -10px;
+  text-align: left;
+}
+
+.switchText {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.switchText span {
+  color: #0b63f6;
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+  .adminLoginCard {
+    padding: 25px 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .inputBox input {
+    font-size: 13px;
+  }
+
+  .loginBtn {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .adminLoginCard {
+    padding: 35px 30px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .inputBox input {
+    font-size: 14px;
+  }
+
+  .loginBtn {
+    font-size: 14px;
+    padding: 11px 0;
+  }
+}

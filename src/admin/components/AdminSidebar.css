@@ -1,0 +1,45 @@
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e6e6e6;
+  padding: 22px 18px;
+}
+
+.adminLogo {
+  font-size: 22px;
+  font-weight: 900;
+  color: #111;
+}
+
+.adminTag {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #666;
+}
+
+.sideNav {
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sideLink {
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #333;
+  transition: 0.2s;
+}
+
+.sideLink:hover {
+  background: #f3f6ff;
+  color: #0b63f6;
+}
+
+.sideLink.active {
+  background: #0b63f6;
+  color: white;
+}
