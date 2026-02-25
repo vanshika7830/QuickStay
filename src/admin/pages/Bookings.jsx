@@ -2,6 +2,7 @@ import "./Bookings.css";
 import { Search, Eye } from "lucide-react";
 import { useMemo, useState, useEffect } from "react";
 import axios from "axios";
+const API = import.meta.env.VITE_API_URL;
 
 export default function Bookings() {
   const [search, setSearch] = useState("");
@@ -20,7 +21,7 @@ export default function Bookings() {
       }
 
       try {
-        const { data } = await axios.get("http://localhost:5000/api/bookings", {
+        const { data } = await axios.get(`${API}/api/bookings`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

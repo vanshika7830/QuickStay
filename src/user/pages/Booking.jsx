@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import confetti from "canvas-confetti";
+const API = import.meta.env.VITE_API_URL;
 
 export default function Booking() {
   const { id } = useParams();
@@ -16,7 +17,7 @@ export default function Booking() {
     async function fetchHotel() {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/hotels/${id}`
+          `${API}/api/hotels/${id}`
         );
         setHotel(res.data);
       } catch (error) {
@@ -131,7 +132,7 @@ export default function Booking() {
       }
 
       await axios.post(
-        "http://localhost:5000/api/bookings",
+        `${API}/api/bookings`,
         {
           hotelId: hotel._id,
           checkIn: form.checkIn,

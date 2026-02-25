@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./UserProfile.css";
-
+const API = import.meta.env.VITE_API_URL;
 export default function UserProfile() {
   const [user, setUser] = useState({ name: "", email: "" });
   const [editing, setEditing] = useState(false);

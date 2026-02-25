@@ -3,6 +3,7 @@ import { Lock, Mail, User } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+const API = import.meta.env.VITE_API_URL;
 
 export default function AdminLogin() {
   const navigate = useNavigate();
@@ -20,8 +21,8 @@ export default function AdminLogin() {
 
     try {
       const url = isSignup
-        ? "http://localhost:5000/api/auth/admin/register"
-        : "http://localhost:5000/api/auth/admin/login";  // ✅ correct
+        ? `${API}/api/auth/admin/register`
+        : `${API}/api/auth/admin/login`;  
 
       const payload = isSignup
         ? { name, email, password }

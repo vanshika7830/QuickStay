@@ -1,4 +1,5 @@
 import "./Dashboard.css";
+const API = import.meta.env.VITE_API_URL;
 import {
   Hotel,
   CalendarCheck,
@@ -35,7 +36,7 @@ export default function Dashboard() {
     // Fetch hotels count
     const fetchHotels = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/hotels", config);
+        const res = await axios.get(`${API}/api/hotels`, config);
         setStats((prev) => ({ ...prev, totalHotels: res.data.length }));
       } catch (err) {
         console.error("Error fetching hotels:", err.response?.data || err);
@@ -45,7 +46,7 @@ export default function Dashboard() {
     // Fetch bookings for count and revenue
     const fetchBookings = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/bookings", config);
+        const res = await axios.get(`${API}/api/bookings`, config);
         const bookings = res.data;
 
         const totalRevenue = bookings.reduce(
@@ -77,7 +78,7 @@ export default function Dashboard() {
     // Fetch users for active count
     const fetchUsers = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/admin/users", config);
+        const res = await axios.get(`${API}/api/admin/users`, config);
 
         // Count only users with role === "user"
         const activeCount = res.data.filter((u) => u.role === "user").length;

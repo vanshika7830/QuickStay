@@ -2,6 +2,7 @@ import "./HotelDetails.css";
 import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { ArrowLeft, MapPin, Star, Check } from "lucide-react";
+const API = import.meta.env.VITE_API_URL;
 
 export default function HotelDetails() {
   const { id } = useParams(); // This is the MongoDB _id
@@ -12,7 +13,7 @@ export default function HotelDetails() {
   useEffect(() => {
     const fetchHotel = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/hotels/${id}`);
+        const res = await fetch(`${API}/api/hotels/${id}`);
         if (!res.ok) throw new Error("Hotel not found");
         const data = await res.json();
         setHotel(data);

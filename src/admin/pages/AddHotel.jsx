@@ -3,6 +3,7 @@ import { ImagePlus, Save } from "lucide-react";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+const API = import.meta.env.VITE_API_URL;
 
 export default function AddHotel() {
   const navigate = useNavigate();
@@ -45,7 +46,7 @@ export default function AddHotel() {
 
       files.forEach((file) => formData.append("images", file)); // append files
 
-      const res = await axios.post("http://localhost:5000/api/hotels/add", formData, {
+      const res = await axios.post(`${API}/api/hotels/add`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

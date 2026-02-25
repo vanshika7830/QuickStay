@@ -2,7 +2,7 @@ import "./Hotels.css";
 import { useState, useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { Search, SlidersHorizontal, Star } from "lucide-react";
-
+const API = import.meta.env.VITE_API_URL;
 export default function Hotels() {
   const navigate = useNavigate();
 
@@ -19,7 +19,7 @@ export default function Hotels() {
   useEffect(() => {
     const fetchHotels = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/hotels/public"); // public route
+        const res = await fetch(`${API}/api/hotels/public`); // public route
         if (!res.ok) throw new Error("Failed to fetch hotels");
         const data = await res.json();
         setHotelsData(data);

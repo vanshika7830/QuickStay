@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 import "./UserDashboard.css";
-
+const API = import.meta.env.VITE_API_URL;
 export default function UserDashboard() {
   const user = JSON.parse(localStorage.getItem("user"));
 

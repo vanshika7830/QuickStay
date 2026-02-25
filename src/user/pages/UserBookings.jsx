@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./UserBookings.css";
-
+const API = import.meta.env.VITE_API_URL;
 export default function UserBookings() {
   const [bookings, setBookings] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -9,7 +9,7 @@ export default function UserBookings() {
   // Fetch bookings
   const fetchBookings = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/bookings/my-bookings", {
+      const res = await fetch(`${API}/api/bookings/my-bookings`, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
@@ -36,7 +36,7 @@ export default function UserBookings() {
     if (!window.confirm("Are you sure you want to cancel this booking?")) return;
 
     try {
-      const res = await fetch(`http://localhost:5000/api/bookings/${bookingId}/cancel`, {
+      const res = await fetch(`${API}/api/bookings/${bookingId}/cancel`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

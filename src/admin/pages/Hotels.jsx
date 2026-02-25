@@ -3,6 +3,7 @@ import { Plus, Search, Trash2, Pencil } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useMemo, useState, useEffect } from "react";
 import axios from "axios";
+const API = import.meta.env.VITE_API_URL;
 
 export default function Hotels() {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ export default function Hotels() {
       }
 
       try {
-        const { data } = await axios.get("http://localhost:5000/api/hotels", {
+        const { data } = await axios.get(`${API}/api/hotels`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
