@@ -1,0 +1,180 @@
+.hotelDetailsPage {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px 8%;
+  background: #f6f7fb;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-weight: 900;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: 0.2s;
+}
+
+.backBtn:hover {
+  transform: translateY(-2px);
+}
+
+.detailsCard {
+  display: flex;
+  gap: 20px; /* space between image and content */
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 20px;
+  max-width: 900px; /* limit width */
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.detailsImg {
+  flex: 0 0 300px; /* image width */
+  height: 200px; /* adjust height */
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+}
+
+.detailsBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.detailsTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.detailsTop h1 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+
+.detailsLoc {
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.detailsRating {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.detailsRating span {
+  font-size: 16px;
+  margin-left: 6px;
+}
+
+.detailsRating p {
+  margin: 6px 0 0;
+  font-size: 12px;
+  opacity: 0.8;
+  font-weight: 700;
+}
+
+.detailsDesc {
+  margin: 15px 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+}
+
+
+.amenitiesBox h3 {
+  margin: 0 0 12px;
+}
+
+.amenitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.amenityItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f3f4f6;
+  padding: 10px 12px;
+  border-radius: 14px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.detailsBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+
+.detailsPrice {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.detailsPrice span {
+  font-size: 13px;
+  color: #666;
+  font-weight: 700;
+}
+
+.bookBtn {
+  background: #1d4ed8;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+
+
+.bookBtn:hover {
+  background: #2563eb;
+}
+
+@media (max-width: 1000px) {
+  .detailsCard {
+    grid-template-columns: 1fr;
+  }
+
+  .detailsImg {
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hotelDetailsPage {
+    padding: 22px 5%;
+  }
+
+  .detailsTop {
+    flex-direction: column;
+  }
+
+  .amenitiesGrid {
+    grid-template-columns: 1fr;
+  }
+}
